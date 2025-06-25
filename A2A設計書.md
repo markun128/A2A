@@ -253,13 +253,13 @@ graph TD
     F3 --> G
     F4 --> G
     
-    style A fill:#ffcccc
-    style G fill:#ccffcc
-    style B fill:#ffffcc
-    style C fill:#ccccff
-    style D fill:#ffccff
-    style E fill:#ccffff
-    style F fill:#ffeecc
+    style A fill:#ff6b6b,stroke:#fff,stroke-width:2px,color:#fff
+    style G fill:#51cf66,stroke:#fff,stroke-width:2px,color:#000
+    style B fill:#ffd43b,stroke:#333,stroke-width:2px,color:#000
+    style C fill:#74c0fc,stroke:#333,stroke-width:2px,color:#000
+    style D fill:#da77f2,stroke:#fff,stroke-width:2px,color:#fff
+    style E fill:#4dabf7,stroke:#fff,stroke-width:2px,color:#fff
+    style F fill:#ff922b,stroke:#333,stroke-width:2px,color:#000
 ```
 
 ## 2.2 エージェント間コミュニケーションプロトコル
