@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フェーズ1 エージェント役割・特性詳細表</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #444;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 22px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .agent-card {
+            margin-bottom: 30px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .agent-header {
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+        }
+        .analysis-agent .agent-header {
+            background-color: #f57c00;
+        }
+        .processing-agent .agent-header {
+            background-color: #8e24aa;
+        }
+        .integration-agent .agent-header {
+            background-color: #388e3c;
+        }
+        .decision-agent .agent-header {
+            background-color: #c2185b;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            background-color: #f5f5f5;
+            color: #333;
+            font-weight: bold;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+            font-size: 14px;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+            font-size: 14px;
+        }
+        .role-col {
+            width: 25%;
+            font-weight: 500;
+        }
+        .characteristic-col {
+            width: 20%;
+        }
+        .personality-col {
+            width: 25%;
+        }
+        .theory-col {
+            width: 30%;
+        }
+        .personality-type {
+            background-color: #f0f0f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin: 2px 0;
+            display: inline-block;
+            font-size: 13px;
+        }
+        .theory-item {
+            background-color: #e3f2fd;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin: 2px 0;
+            display: inline-block;
+            font-size: 13px;
+        }
+        .prompt-section {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #2196f3;
+        }
+        .prompt-text {
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #1565c0;
+            line-height: 1.5;
+        }
+        .summary-table {
+            margin-top: 30px;
+        }
+        .summary-table table {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .summary-table th {
+            background-color: #1976d2;
+            color: white;
+        }
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin: 3px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>フェーズ1『課題分解』エージェント役割・特性詳細表</h1>
+
+        <h2>1. 個別エージェント詳細</h2>
+
+        <!-- 分析エージェント -->
+        <div class="agent-card analysis-agent">
+            <div class="agent-header">分析エージェント (Analysis Agent)</div>
+            <table>
+                <tr>
+                    <th class="role-col">主要な役割</th>
+                    <th class="characteristic-col">主要特性</th>
+                    <th class="personality-col">性格タイプ</th>
+                    <th class="theory-col">活用理論・手法</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>課題の構造化と体系化</li>
+                            <li>問題の本質的原因の抽出</li>
+                            <li>論理的な因果関係の明確化</li>
+                            <li>課題の抽象化と階層化</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>体系的思考力</li>
+                            <li>抽象化能力</li>
+                            <li>本質化能力</li>
+                            <li>論理的整合性</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <div class="personality-type">システマティック型</div><br>
+                        課題を網羅的・階層的に整理<br><br>
+                        <div class="personality-type">クリティカル型</div><br>
+                        根本原因の深掘りと批判的分析
+                    </td>
+                    <td>
+                        <div class="theory-item">システムシンキング</div>
+                        <div class="theory-item">MECE原則</div>
+                        <div class="theory-item">ロジックツリー</div>
+                        <div class="theory-item">因果ループ図</div>
+                        <div class="theory-item">5Why分析</div>
+                    </td>
+                </tr>
+            </table>
+            <div class="prompt-section">
+                <strong>推奨プロンプト例：</strong>
+                <div class="prompt-text">
+                    『与えられた課題について、MECEの原則に従い、全ての要素を漏れなくかつダブりなく体系的に整理し、因果関係が明確なロジックツリーとして提示してください。さらに、問題の根本原因を抽象化し、本質的な課題を特定してください。』
+                </div>
+            </div>
+        </div>
+
+        <!-- 処理エージェント -->
+        <div class="agent-card processing-agent">
+            <div class="agent-header">処理エージェント (Processing Agent)</div>
+            <table>
+                <tr>
+                    <th class="role-col">主要な役割</th>
+                    <th class="characteristic-col">主要特性</th>
+                    <th class="personality-col">性格タイプ</th>
+                    <th class="theory-col">活用理論・手法</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>課題の実行可能な単位への分割</li>
+                            <li>並列実行可能なタスク設計</li>
+                            <li>タスク間の依存関係の明確化</li>
+                            <li>実行計画の策定</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>論理的分割能力</li>
+                            <li>並列化設計力</li>
+                            <li>柔軟な適応性</li>
+                            <li>実行性重視</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <div class="personality-type">構造化推進型</div><br>
+                        適切な粒度でのタスク分割<br><br>
+                        <div class="personality-type">柔軟適応型</div><br>
+                        状況に応じた柔軟な分割と調整
+                    </td>
+                    <td>
+                        <div class="theory-item">分割統治法</div>
+                        <div class="theory-item">WBS (Work Breakdown Structure)</div>
+                        <div class="theory-item">アジャイルスクラム</div>
+                        <div class="theory-item">PERT/CPM</div>
+                        <div class="theory-item">並列処理理論</div>
+                    </td>
+                </tr>
+            </table>
+            <div class="prompt-section">
+                <strong>推奨プロンプト例：</strong>
+                <div class="prompt-text">
+                    『提示された構造化された課題を元に、論理的かつ明確なサブタスク群に分割してください。分割したタスクは柔軟に変更可能であることを前提とし、具体的に実行可能なサイズで並列処理が可能な構造として定義してください。』
+                </div>
+            </div>
+        </div>
+
+        <!-- 統合エージェント -->
+        <div class="agent-card integration-agent">
+            <div class="agent-header">統合エージェント (Integration Agent)</div>
+            <table>
+                <tr>
+                    <th class="role-col">主要な役割</th>
+                    <th class="characteristic-col">主要特性</th>
+                    <th class="personality-col">性格タイプ</th>
+                    <th class="theory-col">活用理論・手法</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>タスクとエージェントの最適マッチング</li>
+                            <li>リソースの効率的配分</li>
+                            <li>負荷分散の動的調整</li>
+                            <li>エージェント間の調整</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>マッチング能力</li>
+                            <li>最適資源配分</li>
+                            <li>動的調整力</li>
+                            <li>効率性追求</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <div class="personality-type">調整型</div><br>
+                        能力とタスクの的確なマッチング<br><br>
+                        <div class="personality-type">効率追求型</div><br>
+                        迅速で効率的な資源配分
+                    </td>
+                    <td>
+                        <div class="theory-item">安定マッチング理論</div>
+                        <div class="theory-item">ゲール＝シャプレイアルゴリズム</div>
+                        <div class="theory-item">多基準意思決定 (AHP, TOPSIS)</div>
+                        <div class="theory-item">線形計画法</div>
+                        <div class="theory-item">動的負荷分散</div>
+                    </td>
+                </tr>
+            </table>
+            <div class="prompt-section">
+                <strong>推奨プロンプト例：</strong>
+                <div class="prompt-text">
+                    『与えられたサブタスクを各エージェントの専門性・実績・負荷状況に基づいて迅速かつ効率的に最適なエージェントにマッチングしてください。リアルタイムな負荷変動にも対応可能な動的な選定結果を提示してください。』
+                </div>
+            </div>
+        </div>
+
+        <!-- 意思決定エージェント -->
+        <div class="agent-card decision-agent">
+            <div class="agent-header">意思決定エージェント (Decision Agent)</div>
+            <table>
+                <tr>
+                    <th class="role-col">主要な役割</th>
+                    <th class="characteristic-col">主要特性</th>
+                    <th class="personality-col">性格タイプ</th>
+                    <th class="theory-col">活用理論・手法</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>総合的な課題解決戦略の策定</li>
+                            <li>リスク評価と管理</li>
+                            <li>複数シナリオの比較検討</li>
+                            <li>最終的な意思決定</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>戦略的思考力</li>
+                            <li>リスク評価能力</li>
+                            <li>多角的視点</li>
+                            <li>統合的判断力</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <div class="personality-type">保守戦略型</div><br>
+                        安全で堅実な戦略立案<br><br>
+                        <div class="personality-type">攻撃戦略型</div><br>
+                        革新的でリスクを取る戦略
+                    </td>
+                    <td>
+                        <div class="theory-item">ゲーム理論</div>
+                        <div class="theory-item">リアルオプション理論</div>
+                        <div class="theory-item">リスクマネジメント</div>
+                        <div class="theory-item">シナリオプランニング</div>
+                        <div class="theory-item">意思決定木</div>
+                    </td>
+                </tr>
+            </table>
+            <div class="prompt-section">
+                <strong>推奨プロンプト例：</strong>
+                <div class="prompt-text">
+                    『提示されたサブタスク群とエージェントの選定結果を基に、リスクとリターンのバランスを考慮し、複数のシナリオを評価した上で最適な戦略を策定してください。ゲーム理論やリアルオプション理論を活用し、革新的でかつ実行可能な意思決定を提示してください。』
+                </div>
+            </div>
+        </div>
+
+        <h2>2. エージェント特性比較表</h2>
+        
+        <div class="summary-table">
+            <table>
+                <tr>
+                    <th style="width: 20%;">エージェント名</th>
+                    <th style="width: 20%;">主要特性</th>
+                    <th style="width: 25%;">強調ポイント</th>
+                    <th style="width: 20%;">アウトプット</th>
+                    <th style="width: 15%;">評価基準</th>
+                </tr>
+                <tr>
+                    <td><strong>分析エージェント</strong></td>
+                    <td>抽象化・構造化能力</td>
+                    <td>課題の全体的理解と本質的原因の特定</td>
+                    <td>課題構造図（ロジックツリー）</td>
+                    <td>
+                        • 論理的整合性<br>
+                        • MECE性<br>
+                        • 本質性
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>処理エージェント</strong></td>
+                    <td>柔軟なタスク分割能力</td>
+                    <td>実行性重視のタスク分割と柔軟な対応力</td>
+                    <td>サブタスク定義書</td>
+                    <td>
+                        • 実行可能性<br>
+                        • 並列性<br>
+                        • 粒度の適切性
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>統合エージェント</strong></td>
+                    <td>動的選定・負荷調整能力</td>
+                    <td>最適資源のリアルタイム調整</td>
+                    <td>エージェント選定リスト</td>
+                    <td>
+                        • マッチング精度<br>
+                        • 負荷バランス<br>
+                        • 効率性
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>意思決定エージェント</strong></td>
+                    <td>戦略策定・リスク評価能力</td>
+                    <td>革新的で安全な意思決定</td>
+                    <td>課題解決戦略レポート</td>
+                    <td>
+                        • 戦略の実現性<br>
+                        • リスク対効果<br>
+                        • 革新性
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>3. エージェント選定スコア算出基準</h2>
+        
+        <div class="summary-table">
+            <table>
+                <tr>
+                    <th style="width: 25%;">評価項目</th>
+                    <th style="width: 15%;">重み</th>
+                    <th style="width: 60%;">評価内容</th>
+                </tr>
+                <tr>
+                    <td><strong>専門性スコア</strong></td>
+                    <td>40%</td>
+                    <td>
+                        • タスクに対する専門知識の適合度<br>
+                        • 過去の類似タスクでの実績<br>
+                        • 特定分野での深い知見
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>実績スコア</strong></td>
+                    <td>30%</td>
+                    <td>
+                        • 成功率（過去のタスク完了率）<br>
+                        • 品質評価（アウトプットの品質）<br>
+                        • 処理速度（平均処理時間）
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>負荷率スコア</strong></td>
+                    <td>30%</td>
+                    <td>
+                        • 現在の処理中タスク数<br>
+                        • CPU/メモリ使用率<br>
+                        • 待機キューの長さ
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div style="background-color: #e3f2fd; padding: 15px; margin-top: 20px; border-radius: 5px;">
+            <strong>総合スコア計算式：</strong><br>
+            <code style="font-size: 16px; color: #1565c0;">
+                スコア = (専門性スコア × 0.4) + (実績スコア × 0.3) + (1 - 負荷率) × 0.3
+            </code>
+        </div>
+    </div>
+</body>
+</html>
