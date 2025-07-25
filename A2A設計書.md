@@ -1,4 +1,4 @@
-# A2A (Application-to-Application) システム設計書
+# A2A (Agent-to-Agent) システム設計書
 
 ## 1. 概要
 
